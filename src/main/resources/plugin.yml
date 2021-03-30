@@ -1,4 +1,4 @@
-name: CustomItems (PPG)
+name: CustomItemsPPG
 version: ${project.version}
 main: uk.ppgmediagroup.customitems.Core
 api-version: 1.16

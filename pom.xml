@@ -6,10 +6,10 @@
 
     <groupId>uk.ppgmediagroup</groupId>
     <artifactId>customitems</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>CustomItems (PPG)</name>
+    <name>CustomItemsPPG</name>
 
     <description>Custom food items that we display in our videos!</description>
     <properties>
@@ -71,6 +71,11 @@
             <artifactId>spigot-api</artifactId>
             <version>1.16.5-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.18</version>
         </dependency>
     </dependencies>
 </project>

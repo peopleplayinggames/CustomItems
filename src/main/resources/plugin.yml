@@ -1,0 +1,7 @@
+name: CustomItems (PPG)
+version: ${project.version}
+main: uk.ppgmediagroup.customitems.Core
+api-version: 1.16
+authors: [ Wising, Lymed, Enderlew, Bonzaii, ElectroTech ]
+description: Custom food items that we display in our videos!
+website: ppgmediagroup.uk

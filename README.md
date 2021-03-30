@@ -8,6 +8,6 @@ The custom recipe plugin displayed in our videos
 - Enjoy!
 
 ### How does it work?
-The plugin automatically sends the latest version of the resource pack to the players as they join, recipes are easy to discover in the players recipe book.
+The plugin automatically sends the latest version (relating to version of the plugin) of the resource pack to the players as they join, recipes are easy to discover in the players recipe book.
 
 **A wiki page will come soon explaning every item**

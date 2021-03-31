@@ -4,6 +4,7 @@ import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.plugin.java.JavaPlugin;
+import uk.ppgmediagroup.customitems.commands.CustomItem;
 import uk.ppgmediagroup.customitems.listeners.PlayerListener;
 import uk.ppgmediagroup.customitems.recipes.RecipeManager;
 
@@ -24,6 +25,9 @@ public final class Core extends JavaPlugin {
 
         // listener
         Bukkit.getPluginManager().registerEvents(new PlayerListener(), this);
+
+
+        getCommand("customitem").setExecutor(new CustomItem());
 
         // woah it worked ima send a cool console message!
         System.out.println(

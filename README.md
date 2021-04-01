@@ -7,6 +7,16 @@ The custom recipe plugin displayed in our videos
 - Restart the server
 - Enjoy!
 
+### Commands
+/customitem <ITEM_NAME>
+- Permission: OP
+- Usage: Giving yourself one custom item without having to craft it
+
+### Items
+Roast Dinner:
+- ID: ROAST_DINNER
+- Effects: Gives player same effects as enchanted golden apple but for extended period of time (double)
+
 ### How does it work?
 The plugin automatically sends the latest version (relating to version of the plugin) of the resource pack to the players as they join, recipes are easy to discover in the players recipe book.
 

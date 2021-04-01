@@ -1,6 +1,7 @@
 package uk.ppgmediagroup.customitems;
 
 import lombok.Getter;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -20,6 +21,9 @@ public final class Core extends JavaPlugin {
 
     @Override
     public void onEnable() {
+
+        loadMetrics();
+
         instance = this;
         recipeManager = new RecipeManager();
 
@@ -35,4 +39,9 @@ public final class Core extends JavaPlugin {
                 "Loaded CustomItems " + getDescription().getVersion() + " by PPG.yt\n" +
                 "------------------------------------------");
     }
+
+    protected void loadMetrics() {
+        new Metrics(this, 10884);
+    }
+
 }

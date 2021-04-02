@@ -1,7 +1,8 @@
-package uk.ppgmediagroup.customitems.recipes.impl;
+package uk.ppgmediagroup.customitems.recipes.impl.item;
 
 import org.bukkit.*;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
@@ -10,6 +11,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import uk.ppgmediagroup.customitems.Core;
 import uk.ppgmediagroup.customitems.recipes.Recipe;
+import uk.ppgmediagroup.customitems.utils.RecipeChecker;
 
 import java.util.Objects;
 
@@ -47,9 +49,9 @@ public class RoastDinner extends Recipe {
         return recipe;
     }
 
-    @Override
+    @EventHandler
     public void onConsume(PlayerItemConsumeEvent e) {
-        if (Objects.requireNonNull(e.getItem().getItemMeta()).getCustomModelData() == 1) {
+        if (RecipeChecker.isItem(this, e.getItem())) {
             Player player = e.getPlayer();
             player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 30 * 20, 2));
             player.addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 120 * 20, 4));

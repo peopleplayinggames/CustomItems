@@ -29,14 +29,6 @@ public final class Core extends JavaPlugin {
 
         loadMetrics();
 
-        checkUpdate();
-        new BukkitRunnable() {
-            @Override
-            public void run() {
-                checkUpdate();
-            }
-        }.runTaskTimer(this, 0, (20 * 60) * 20);
-
         instance = this;
         recipeManager = new RecipeManager();
 
@@ -55,27 +47,6 @@ public final class Core extends JavaPlugin {
 
     protected void loadMetrics() {
         new Metrics(this, 10884);
-    }
-
-    protected void checkUpdate() {
-        try {
-            JSONObject jsonObject = JSONGrabber.readJsonFromUrl("https://api.github.com/repos/peopleplayinggames/CustomItems/releases");
-            JSONArray array = jsonObject.optJSONArray("");
-            JSONObject newestRelease = (JSONObject) array.get(0);
-            int newRelease = Integer.parseInt(newestRelease.getString("name")
-                    .replace("Release", "").replace(" ", "").replace("v", ""));
-
-            if (Integer.parseInt(getDescription().getVersion()) != newRelease) {
-                getLogger().info("Version " + newRelease + " is now available to download @ https://github.com/peopleplayinggames/CustomItems/releases");
-                updateAvailable = true;
-            }
-
-        } catch (Exception e) {
-            getLogger().warning("Unable to check for updates on gitHub, sending report to systems.");
-
-            // Report to system
-
-        }
     }
 
 }

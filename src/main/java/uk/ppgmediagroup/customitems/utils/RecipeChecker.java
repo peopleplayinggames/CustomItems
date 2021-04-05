@@ -7,9 +7,9 @@ public class RecipeChecker {
 
     public static boolean isItem(Recipe recipe, ItemStack itemStack) {
 
-        if (recipe.getItem() != null) {
-            if (recipe.getItem().hasItemMeta()) {
-                if (recipe.getItem().getItemMeta().hasCustomModelData()) {
+        if (itemStack != null) {
+            if (itemStack.hasItemMeta()) {
+                if (itemStack.getItemMeta().hasCustomModelData()) {
                     return recipe.getItem().getItemMeta().getCustomModelData() == itemStack.getItemMeta().getCustomModelData();
                 }
             }

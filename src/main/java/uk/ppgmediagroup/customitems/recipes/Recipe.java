@@ -10,8 +10,11 @@ public abstract class Recipe implements Listener {
 
     public Recipe() {
         ShapedRecipe shapedRecipe = recipe(getItem());
-        Bukkit.addRecipe(shapedRecipe);
-        Core.getInstance().getRecipes().add(shapedRecipe.getKey());
+        if (shapedRecipe != null) {
+            // Check if item has a recipe
+            Bukkit.addRecipe(shapedRecipe);
+            Core.getInstance().getRecipes().add(shapedRecipe.getKey());
+        }
         Bukkit.getPluginManager().registerEvents(this, Core.getInstance());
     }
 

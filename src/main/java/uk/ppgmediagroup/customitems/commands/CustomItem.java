@@ -19,8 +19,8 @@ public class CustomItem implements CommandExecutor {
 
         Player player = (Player) sender;
 
-        if (!player.isOp()) {
-            player.sendMessage(ChatColor.RED + "You need OP for this.");
+        if (!player.isOp() || !player.hasPermission("customitems.give")) {
+            player.sendMessage(ChatColor.RED + "No permission");
             return false;
         }
 

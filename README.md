@@ -1,4 +1,7 @@
 # CustomItems
+
+**Warning: The download seems to no longer be working for the resource pack, we recommend you no longer use this. An update may come in the future but that is unlikely as of November 2021.**
+
 The custom recipe plugin displayed in our videos
 
 ### Usage
